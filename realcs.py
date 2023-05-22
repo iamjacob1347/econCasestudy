@@ -5,6 +5,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 import streamlit as st
+import re
 from streamlit_option_menu import option_menu
 
 st.set_page_config(layout="wide")
@@ -13,7 +14,7 @@ filepath = ""
 
 df = pd.read_csv(filepath + "inflation_interest_unemployment.csv")
 
-df.columns = df.columns.str.replace("(%)", "percent", regex = True).str.replace("(", "", regex = True).str.replace(")", "", regex = True).str.replace(" ", "_")
+df.columns = df.columns.to_series().apply(lambda x: re.sub("\(.*\)", "", x).replace("%", "percent").replace(" ", "_"))
 
 tempDict = {'Inflation_for_consumer_prices_annual_percent': 'Inflation for Consumer Prices in Annual Percent',
 'Inflation_for_GDP_deflator_annual_percent': 'Inflation for GDP Deflator in Annual Percent',
