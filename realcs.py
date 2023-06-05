@@ -164,28 +164,52 @@ if selected == 'Data Analysis':
 
 	st.markdown("Let's start by comparing the inflation sitation as it has the most data, but also just one single variable making it easy to analyze. The inflation situation will analyze countries from all over the world")
 
+	afghanaInflation = px.scatter(df, x = "year", y = "Inflation_for_consumer_prices_annual_percent", animation_frame = "year", color = "year", hover_name = "country")
+
+	st.plotly_chart(afghanInflation)
+	
 	st.markdown('<h3>Comparing Types of Interest Rates Across Countries</h3>', unsafe_allow_html = True)
 
 	st.markdown("Let's continue by comparing the interest rates across countries, as it has three very similar variables, making the comparison having both equal amounts of similarities and differences. The interest rate analysis will compare countries from all over the world")
+	
+	afghanInterest = px.scatter(df, x = "year", y = "Real_interest_rate_percent", animation_frame = "year", color = "year", hover_name = "country")
 
+	st.plotly_chart(afghanInterest)
+	
 	st.markdown('<h3>Comparing Unemployment Across Countries</h3>', unsafe_allow_html = True)
 
 	st.markdown("Finally, lets compare the unemployment situation across countries, where it is merely just a estimate, and not exact like the other two analysis. The unemployment situation will analyze countries from all over the world")
 
+	afghanUnemp = px.scatter(df, x = "year", y = "Unemployment_total_percent_of_total_labor_force_national_estimate", animation_frame = "year", color = "year", hover_name = "country")
+
+	st.plotly_chart(afghanUnemp)
+	
 	st.markdown('<h2>Analysis #3: Belize</h2>', unsafe_allow_html = True)
 
 	st.markdown('<h3>Comparing Inflation Across Countries</h3>', unsafe_allow_html = True)
 
 	st.markdown("Let's start by comparing the inflation sitation as it has the most data, but also just one single variable making it easy to analyze. The inflation situation will analyze countries from all over the world")
 
+	belizeInflation = px.scatter(df, x = "year", y = "Inflation_for_consumer_prices_annual_percent", animation_frame = "year", color = "year", hover_name = "country")
+
+	st.plotly_chart(belizeInflation)
+	
 	st.markdown('<h3>Comparing Types of Interest Rates Across Countries</h3>', unsafe_allow_html = True)
 
 	st.markdown("Let's continue by comparing the interest rates across countries, as it has three very similar variables, making the comparison having both equal amounts of similarities and differences. The interest rate analysis will compare countries from all over the world")
+	
+	belizeInterest = px.scatter(df, x = "year", y = "Real_interest_rate_percent", animation_frame = "year", color = "year", hover_name = "country")
 
+	st.plotly_chart(belizeInterest)
+	
 	st.markdown('<h3>Comparing Unemployment Across Countries</h3>', unsafe_allow_html = True)
 
 	st.markdown("Finally, lets compare the unemployment situation across countries, where it is merely just a estimate, and not exact like the other two analysis. The unemployment situation will analyze countries from all over the world")
+	
+	belizeUnemp = px.scatter(df, x = "year", y = "Unemployment_total_percent_of_total_labor_force_national_estimate", animation_frame = "year", color = "year", hover_name = "country")
 
+	st.plotly_chart(belizeUnemp)
+	
 if selected == 'Interactive':
 	st.markdown('<h1>Interactive</h1>', unsafe_allow_html = True)
 
