@@ -24,6 +24,8 @@ tempDict = {'Inflation_for_consumer_prices_annual_percent': 'Inflation for Consu
  'Unemployment_total_percent_of_total_labor_force_national_estimate': 'National Estimate for Unemployment Rate of Total Labor Force',
  'Unemployment_total_percent_of_total_labor_force_modeled_ILO_estimate': 'Modeled ILO Estimate for Unemployment Rate of Total Labor Force'}
 
+st.write(df)
+
 # sidebar menu
 with st.sidebar: 
 	selected = option_menu(
